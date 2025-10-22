@@ -9,3 +9,6 @@ def registrar(request):
 
 def principal(request):
     return render(request, "inicio/principal.html")
+
+def ejemplo(request):
+    return render(request, "inicio/ejemplo.html")
