@@ -6,11 +6,11 @@
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
 <title>Plantilla</title>
 
-{%load static%}
-<link href="{% static 'inicio/css/bootstrap.min.css'%}" rel="stylesheet" type="text/css">
-<link href="{% static 'inicio/css/londinium-theme.css'%}" rel="stylesheet" type="text/css">
-<link href="{% static 'inicio/css/styles.css'%}" rel="stylesheet" type="text/css">
-<link href="{% static 'inicio/css/icons.css'%}" rel="stylesheet" type="text/css">
+
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="css/londinium-theme.css" rel="stylesheet" type="text/css">
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+<link href="css/icons.css" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
@@ -58,31 +58,36 @@
 
 		<!-- Barra de menú -->
 		<div class="sidebar">
-            <div class="user-menu dropdown">
-                <a href="#">
-                    <img src="{%block imagen%}{%endblock%}">
-                    <div class='user-info'>
-                        {%block info%}{%endblock%}
-                    </div>
-                </a>
-            </div>
 			<div class="sidebar-content">
 				<!-- Menú de navegación -->
 				<ul class="navigation">
-							<li><a href="{%url 'Principal'%}">Home</a><li/>
-							<li><a href="{%url 'Formulario'%}">Formulario</a><li/>
-							<li><a href="{%url 'Contacto'%}">Contacto</a><li/>	
+							<li><a href="principal.html">Principal</a></li>
+							<li><a href="formulario.html">Registro</a></li>		
 				</ul>
 				<!-- /Fin menú -->
 			</div>
 		</div>
 		<!-- /sidebar -->
-	</div>
-	<!--CONTENIDO-->
-    {% block contenido %}  <!--Template Tag-->
-    <!--block sirve para indicar que colocaremos 
-    un bloque de contenido a traves de nuestra variable content-->
 
-    {% endblock %}
+
+		<!-- Contenido Principal-->
+	 	<div class="page-content">
+
+
+			<!--Encabezdo -->
+			<div class="page-header">
+				<div class="page-title">
+					<h3>Alumnos
+				    <small>Lista de Alumnos </small></h3>
+				</div>
+
+				
+			</div>
+			<!-- /Encabezado-->
+
+
+		</div>
+		<!-- /Contenido Principal-->
+	</div>
 </body>
 </html>
